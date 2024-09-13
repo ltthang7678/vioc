@@ -1,7 +1,7 @@
 import argparse
 
-from vietocr.model.trainer import Trainer
-from vietocr.tool.config import Cfg
+from vioc.vietocr.model.trainer import Trainer
+from vioc.vietocr.tool.config import Cfg
 
 def main():
     parser = argparse.ArgumentParser()

@@ -1,25 +1,25 @@
-from vietocr.optim.optim import ScheduledOptim
-from vietocr.optim.labelsmoothingloss import LabelSmoothingLoss
+from vioc.vietocr.optim.optim import ScheduledOptim
+from vioc.vietocr.optim.labelsmoothingloss import LabelSmoothingLoss
 from torch.optim import Adam, SGD, AdamW
 from torch import nn
-from vietocr.tool.translate import build_model
-from vietocr.tool.translate import translate, batch_translate_beam_search
-from vietocr.tool.utils import download_weights
-from vietocr.tool.logger import Logger
-from vietocr.loader.aug import ImgAugTransform, ImgAugTransformV2
+from vioc.vietocr.tool.translate import build_model
+from vioc.vietocr.tool.translate import translate, batch_translate_beam_search
+from vioc.vietocr.tool.utils import download_weights
+from vioc.vietocr.tool.logger import Logger
+from vioc.vietocr.loader.aug import ImgAugTransform, ImgAugTransformV2
 from matplotlib.backends.backend_pdf import PdfPages
 
 import yaml
 import torch
-from vietocr.loader.dataloader_v1 import DataGen
-from vietocr.loader.dataloader import OCRDataset, ClusterRandomSampler, Collator
+from vioc.vietocr.loader.dataloader_v1 import DataGen
+from vioc.vietocr.loader.dataloader import OCRDataset, ClusterRandomSampler, Collator
 from torch.utils.data import DataLoader
 from einops import rearrange
 from torch.optim.lr_scheduler import CosineAnnealingLR, CyclicLR, OneCycleLR
 
 import torchvision 
 
-from vietocr.tool.utils import compute_accuracy
+from vioc.vietocr.tool.utils import compute_accuracy
 from PIL import Image
 import numpy as np
 import os

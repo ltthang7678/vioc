@@ -1,8 +1,8 @@
 import argparse
 from PIL import Image
 
-from vietocr.tool.predictor import Predictor
-from vietocr.tool.config import Cfg
+from vioc.vietocr.tool.predictor import Predictor
+from vioc.vietocr.tool.config import Cfg
 
 def main():
     parser = argparse.ArgumentParser()
